@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Likvi - best money clicker</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="card">
+    <p id="text">Wallet? Likvi wallet.</p>
+  </div>
+
+  
+<div class="logo">
+<img src="Logo.png"> 
+</div>
+
+  <div class="progress-bar">
+      <div class="bar"></div>
+      <div class="percent">0%</div>
+  </div>
+  
+  <div class="invest">
+  <img src="invest.png"> 
+  </div>
+
+ <script>
+const bar = document.querySelector('.bar');
+const percent = document.querySelector('.percent');
+
+const updateProgress = (percentage) => {
+    bar.style.width = `${percentage}%`;
+    percent.textContent = `${percentage}%`;
+};
+
+const interval = setInterval(() => {
+    const progress = parseInt(bar.style.width || '0', 10);
+    if (progress < 100) {
+        updateProgress(progress + 1);
+    } else {
+        clearInterval(interval);
+        window.location.href = "Clicker_menu/clicker.html";
+    }
+}, 50);
+
+
+const text = document.getElementById("text");
+
+const messages = [
+  "Likvi coin - the best.",
+  "Invest your feature.",
+  "Wallet? Likvi wallet.",
+];
+
+let index = 0;
+setInterval(() => {
+  text.textContent = messages[index];
+  index = (index + 1) % messages.length;
+}, 1000);
+
+
+window.onload = function() {
+  checkScreenSize();
+  window.onresize = function() {
+    checkScreenSize();
+  };
+};
+
+function checkScreenSize() {
+  if (window.innerWidth > window.innerHeight) {
+    window.location.href = "Mobile/mobile.html";
+  }
+}
+
+
+
+
+</script>
+
+
+
+  
+  
+</body>
+
+</html>

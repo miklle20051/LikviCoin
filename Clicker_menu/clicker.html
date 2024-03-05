@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Likvi - best money clicker</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.coin').addEventListener('click', function() {
+        const clickCount = document.getElementById('click-count');
+        const currentCount = parseInt(clickCount.textContent);
+        clickCount.textContent = currentCount + 1 + ' LC';
+      });
+    });
+
+
+window.onload = function() {
+  checkScreenSize();
+  window.onresize = function() {
+    checkScreenSize();
+  };
+};
+
+function checkScreenSize() {
+  if (window.innerWidth > window.innerHeight) {
+    window.location.href = "../Mobile/mobile.html";
+  }
+}
+
+
+
+  </script>
+
+</head>
+
+<body>
+
+<img class="logo" src="Logo.png">
+
+<div class="wallet-container">
+<h2> Your Balance </h2>
+<h1 id="click-count">0 LC</h1>
+<img class="activity" src="Activity.png">
+</div>
+
+<div class="coin">
+<img class="coin" src="Coin.png">
+</div>
+
+
+  <nav class="white-menu">
+    <a class="menu-item" href="#">
+      <i class="fas fa-home"></i>
+    </a>
+    <a class="menu-item" href="#">
+      <i class="fa-solid fa-credit-card"></i>
+    </a>
+    <a class="menu-item" href="#">
+      <i class="fa-solid fa-bolt"></i>
+    </a>
+    <a class="menu-item" href="#">
+      <i class="fas fa-user"></i>
+    </a>
+  </nav>
+</body>
+</html>

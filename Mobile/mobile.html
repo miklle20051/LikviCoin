@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Likvi - best money clicker</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<script>
+
+window.onload = function() {
+  checkScreenSize();
+  window.onresize = function() {
+    checkScreenSize();
+  };
+};
+
+function checkScreenSize() {
+  if (window.innerWidth < window.innerHeight) {
+    window.location.href = "../index.html";
+  }
+}
+</script>
+
+
+<body>
+
+ <img class= "logo" src="../Logo.png">
+  <h1> Please open mobile! </h1>
+  <img class="qr" src="qr-code.png">
+
+
+</body>
+
+</html>
